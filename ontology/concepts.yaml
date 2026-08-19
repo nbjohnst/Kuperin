@@ -1,0 +1,78 @@
+schema_version: "0.1"
+
+concepts:
+
+  KP-CORE-001:
+    name: "Plumbing Outside the Black Box"
+    definition: >
+      Move persistent organizational work outside probabilistic inference
+      when explicit software can perform that work reliably and inspectably.
+
+  KP-CORE-002:
+    name: "Division of Labor"
+    definition: >
+      Deterministic systems remember, organize, retrieve, and validate;
+      the LLM interprets, synthesizes, reasons, and creates.
+
+  KP-CORE-003:
+    name: "Persistent Identity"
+    definition: >
+      Important concepts maintain stable identities across sessions,
+      documents, representations, and changes in state.
+
+  KP-CORE-004:
+    name: "Store Broadly, Retrieve Narrowly"
+    definition: >
+      Preserve a rich persistent world state while retrieving only the
+      information relevant to the current task.
+
+  KP-CORE-005:
+    name: "Context Compilation"
+    definition: >
+      Transform relevant persistent state into a bounded context package
+      appropriate for a specific inference task.
+
+  KP-CORE-006:
+    name: "Emergent State Integration"
+    definition: >
+      Treat generated work as capable of changing the world, identify
+      consequential changes, and integrate accepted changes back into
+      persistent state.
+
+  KP-CORE-007:
+    name: "Evaluation Rails"
+    definition: >
+      Maintain explicit project priorities and constraints against which
+      generated work can be examined.
+
+  KP-CORE-008:
+    name: "Human Canon Authority"
+    definition: >
+      The system may propose, organize, and evaluate changes, while the
+      human retains authority over what becomes canonical.
+
+  KP-CORE-009:
+    name: "Psychological Cartography"
+    definition: >
+      Represent consequential internal and social state including beliefs,
+      knowledge, interpretation, trust, obligation, and relationships.
+
+  KP-CORE-010:
+    name: "Inference Budget"
+    definition: >
+      Spend probabilistic computation where interpretation, ambiguity,
+      synthesis, or creativity adds value rather than repeatedly using
+      inference to reconstruct known state.
+
+  KP-CORE-011:
+    name: "Structure Curve"
+    definition: >
+      Treat explicit structure as an optimization problem: too little
+      structure may reduce control, while too much may create unnecessary
+      complexity and maintenance cost.
+
+  KP-CORE-012:
+    name: "Portability"
+    definition: >
+      Test whether the external representation can preserve sufficient
+      context across clean sessions, accounts, or different models.
