@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kuperin.dev/schemas/character.schema.json",
+  "title": "Kuperin Character",
+  "description": "Minimal persistent identity record for a character in a Kuperin world.",
+  "type": "object",
+
+  "required": [
+    "id",
+    "name",
+    "status"
+  ],
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^CHAR-[0-9]+$",
+      "description": "Stable identity for the character."
+    },
+
+    "name": {
+      "type": "string",
+      "description": "Current canonical display name."
+    },
+
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Other names, titles, or labels used for this character."
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "dead",
+        "unknown"
+      ],
+      "description": "Current canonical status of the character."
+    },
+
+    "introduced_in": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Source identifier where the character first entered canonical state."
+    },
+
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Small amount of character-level information that does not yet warrant structured representation."
+    }
+  },
+
+  "additionalProperties": false
+}
