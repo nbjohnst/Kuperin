@@ -1,0 +1,11 @@
+{
+  "id": "EVENT-91",
+  "summary": "The king publicly defended the knight.",
+  "participants": [
+    "CHAR-01",
+    "CHAR-07"
+  ],
+  "occurred_in": "STORY-002",
+  "caused_by": [],
+  "notes": "This event provides the knight with evidence that conflicts with his existing interpretation of the king as fundamentally hostile."
+}

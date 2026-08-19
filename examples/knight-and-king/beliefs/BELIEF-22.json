@@ -10,6 +10,8 @@
   "supported_by": [
     "EVENT-16"
   ],
-  "challenged_by": [],
+  "challenged_by": [
+    "EVENT-91"
+  ],
   "introduced_in": "STORY-001"
 }
