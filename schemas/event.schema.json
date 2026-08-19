@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kuperin.dev/schemas/event.schema.json",
+  "title": "Kuperin Event",
+  "description": "A consequential occurrence in the story world.",
+  "type": "object",
+
+  "required": [
+    "id",
+    "summary",
+    "participants"
+  ],
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^EVENT-[0-9]+$",
+      "description": "Stable identity for the event."
+    },
+
+    "summary": {
+      "type": "string",
+      "description": "Concise human-readable description of what occurred."
+    },
+
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Stable IDs of entities directly involved in the event."
+    },
+
+    "occurred_in": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Source or narrative unit in which the event occurred."
+    },
+
+    "caused_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Stable IDs for prior events or conditions directly contributing to this event."
+    },
+
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional information not yet represented structurally."
+    }
+  },
+
+  "additionalProperties": false
+}

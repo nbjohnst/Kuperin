@@ -1,0 +1,11 @@
+{
+  "id": "EVENT-16",
+  "summary": "A previous confrontation with the king caused the knight to interpret the king as threatening and hostile.",
+  "participants": [
+    "CHAR-07",
+    "CHAR-01"
+  ],
+  "occurred_in": "STORY-001",
+  "caused_by": [],
+  "notes": null
+}
