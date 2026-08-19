@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kuperin.dev/schemas/belief.schema.json",
+  "title": "Kuperin Belief",
+  "description": "A proposition held or entertained by an entity within the story world.",
+  "type": "object",
+
+  "required": [
+    "id",
+    "holder",
+    "content",
+    "state"
+  ],
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^BELIEF-[0-9]+$",
+      "description": "Stable identity for this belief."
+    },
+
+    "holder": {
+      "type": "string",
+      "pattern": "^CHAR-[0-9]+$",
+      "description": "Character who holds or entertains the belief."
+    },
+
+    "about": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Stable IDs of entities or concepts this belief concerns."
+    },
+
+    "content": {
+      "type": "string",
+      "description": "Human-readable proposition representing the belief."
+    },
+
+    "state": {
+      "type": "string",
+      "enum": [
+        "held",
+        "questioned",
+        "rejected",
+        "unknown"
+      ],
+      "description": "Current relationship of the holder to the proposition."
+    },
+
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Optional estimate of how strongly the holder believes the proposition."
+    },
+
+    "supported_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Stable IDs for events or evidence supporting the belief."
+    },
+
+    "challenged_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Stable IDs for events or evidence challenging the belief."
+    },
+
+    "introduced_in": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Source where this belief first became part of tracked state."
+    }
+  },
+
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+{
+  "id": "BELIEF-22",
+  "holder": "CHAR-07",
+  "about": [
+    "CHAR-01"
+  ],
+  "content": "The king is fundamentally hostile toward me.",
+  "state": "held",
+  "confidence": 0.9,
+  "supported_by": [
+    "EVENT-16"
+  ],
+  "challenged_by": [],
+  "introduced_in": "STORY-001"
+}
